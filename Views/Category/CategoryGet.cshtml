@@ -1,0 +1,24 @@
+﻿@model CoreAndFood.Data.Models.Category
+@{
+    ViewData["Title"] = "CategoryGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("CategoryUpdate", "Category", FormMethod.Post))
+{
+    <br />
+    <b>Categori idsi</b>
+    @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
+
+    <br />
+    <b>Categori name</b>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+    <br />
+    <b>Categori description</b>
+    @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Update</button>
+
+}
+
